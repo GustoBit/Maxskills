@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'min': '1535px' },
+                    'xl': { 'max': '1279px' },
+                    'lg': { 'max': '1023px' },
+                    'md': { 'max': '767px' },
+                    'sm': { 'max': '639px' },
+                },
+                extend: {
+                    colors: {
+                        green: '#4CBC9A',
+                        colorgray: '#FAFAFA',
+                        ccyan: '#3CC2E0',
+                        qora: '#363B64',
+                        gviolet: '#A098AE',
+                        cblack: '#374557',
+                        cyellow: '#FEC64F',
+                        cgray: '#A098AE',
+                        db: '#DBDBDB',
+                        corange: '#FC6B57',
+                        cpink: '#FFBABF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .active-link img,
+        .hover-img:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .active-link {
+            background-color: #4CBC9A;
+            color: #fff;
+        }
+        .hover-btn:hover > *:not(img) {
+            background-color: #fff;
+        }
+        .active {
+            background-color: #4CBC9A;
+            color: #fff;
+            scale: 1.1;
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="flex h-screen w-screen overflow-hidden bg-colorgray poppins-regular select-none">
+        <aside class="bg-white w-[345px] xl:w-[300px] xl:px-[20px] h-screen px-[46px] py-8">
+            <a href="#" class="block text-center text-4xl poppins-bold text-qora">
+                <span class="text-green text-[40px]">Max</span> Skills <span
+                    class="text-green text-[40px] -ml-[10px]">.</span>
+            </a>
+            <div class="flex flex-col gap-4 mt-[85px] xl:mt-[20px] xl:gap-2">
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/Apps.svg" alt="">
+                    Dashboard
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4 active-link">
+                    <img src="./img/open-book.svg" alt="">
+                    Courses
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/calendar.svg" alt="">
+                    Schedule
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/users.svg" alt="">
+                    Instructors
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/account.svg" alt="">
+                    Profile
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/check.svg" alt="">
+                    Activity
+                </a>
+            </div>
+            <div class="mt-[30px] rounded-2xl bg-white py-8 pl-8 pr-[25px] shadow-[0_20px_50px_0_rgba(55,69,87,0.25)]">
+                <div class="flex items-end poppins-bold text-[18px] text-cblack mb-2">
+                    Upgrade your Account to Pro
+                    <img src="./img/medal.svg" alt="" class="size-[48px]">
+                </div>
+                <div class="poppins-regular text-[14px] text-cgray pr-[7px]">Upgrade to premium to get premium features
+                </div>
+                <button
+                    class="hover:bg-db hover:text-white mt-8 text-white py-[9.5px] px-[22px] bg-green rounded-lg poppins-semibold text-[14px]">Upgrade</button>
+            </div>
+        </aside>
+        <section class="flex-1 h-screen flex flex-col">
+            <header class="py-[30px] pl-10 pr-[50px] bg-white flex items-center">
+                <div class="poppins-bold text-4xl">
+                    Students
+                </div>
+                <form class="flex ml-[200px] gap-2 py-[14px] px-6 bg-colorgray rounded-2xl">
+                    <img src="./img/search.svg" alt="">
+                    <input type="text" placeholder="Kalit so’z bo’yicha qidiruv"
+                        class="bg-colorgray w-[425px] text-lg focus:outline-0">
+                </form>
+                <div class="flex items-center py-[16.5px] px-4 ml-[80px]">
+                    <img src="./img/usa.svg" alt="" class="size-6 overflow-hidden mr-[14px]">
+                    <div class="text-cblack poppins-semibold text-lg mr-4">Eng (US)</div>
+                    <button class="hover:scale-[1.3]"><img src="./img/down.svg" alt=""
+                            class="size-6 overflow-hidden"></button>
+                </div>
+                <div class="flex ml-auto gap-2">
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/chat.svg" alt="">
+                    </button>
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/bell.svg" alt="">
+                    </button>
+                    <a href="#"
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center">
+                        <img src="./img/settings.svg" alt="">
+                    </a>
+                    <a href="#" class="relative ml-4 size-[60px] flex items-center justify-center overflow-hidden">
+                        <img src="./img/photo.jpg" alt="" class="rounded-2xl">
+                    </a>
+                </div>
+            </header>
+            <section class="flex-1 overflow-auto p-10">
+                <section class="grid grid-rows-3 gap-10 h-full">
+                    <a href="./courses.html"
+                        class="py-[15px] px-[25px] text-green rounded-2xl ring-1 ring-inset ring-green bg-green/25 flex items-center justify-center hover:text-white hover:ring-0 hover:bg-green poppins-bold text-2xl">
+                        Courses
+                    </a>
+                    <a href="./overview.html"
+                        class="py-[15px] px-[25px] text-cyellow rounded-2xl ring-1 ring-inset ring-cyellow bg-cyellow/25 flex items-center justify-center hover:text-white hover:ring-0 hover:bg-cyellow poppins-bold text-2xl">
+                        Overview
+                    </a>
+                    <a href="./show.html"
+                        class="py-[15px] px-[25px] text-corange rounded-2xl ring-1 ring-inset ring-corange bg-corange/25 flex items-center justify-center hover:text-white hover:ring-0 hover:bg-corange poppins-bold text-2xl">
+                        Show
+                    </a>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

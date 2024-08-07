@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'min': '1535px' },
+                    'xl': { 'max': '1279px' },
+                    'lg': { 'max': '1023px' },
+                    'md': { 'max': '767px' },
+                    'sm': { 'max': '639px' },
+                },
+                extend: {
+                    colors: {
+                        green: '#4CBC9A',
+                        colorgray: '#FAFAFA',
+                        ccyan: '#3CC2E0',
+                        qora: '#363B64',
+                        gviolet: '#A098AE',
+                        cblack: '#374557',
+                        cyellow: '#FEC64F',
+                        cgray: '#A098AE',
+                        orange: '#FC6B57',
+                        db: '#DBDBDB',
+                        cyellow: '#FEC64F'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .active-link img,
+        .hover-img:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .active-link {
+            background-color: #4CBC9A;
+            color: #fff;
+        }
+        .hover-btn:hover > *:not(img) {
+            background-color: #fff;
+        }
+        .hover-scale img {
+            transition: linear 0.3s;
+        }
+        .hover-scale:hover img {
+            transform: scale(1.2);
+        }
+        .before-check li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-basis: 34%;
+            white-space: nowrap;
+        }
+        .before-check li::before {
+            content: '';
+            background-image: url('./img/check-cicle.svg');
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat-
+        }
+        .blocks {
+            height: calc(100vh - 305px);
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="flex h-screen w-screen overflow-hidden bg-colorgray poppins-regular select-none">
+        <aside class="bg-white w-[345px] xl:w-[300px] xl:px-[20px] h-screen px-[46px] py-8">
+            <a href="#" class="block text-center text-4xl poppins-bold text-qora">
+                <span class="text-green text-[40px]">Max</span> Skills <span class="text-green text-[40px] -ml-[10px]">.</span>
+            </a>
+            <div class="flex flex-col gap-4 mt-[85px] xl:mt-[20px] xl:gap-2">
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/Apps.svg" alt="">
+                    Dashboard
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/open-book.svg" alt="">
+                    Courses
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/calendar.svg" alt="">
+                    Schedule
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/users.svg" alt="">
+                    Instructors
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4 active-link">
+                    <img src="./img/account.svg" alt="">
+                    Profile
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/check.svg" alt="">
+                    Activity
+                </a>
+            </div>
+            <div class="mt-[30px] rounded-2xl bg-white py-8 pl-8 pr-[25px] shadow-[0_20px_50px_0_rgba(55,69,87,0.25)]">
+                <div class="flex items-end poppins-bold text-[18px] text-cblack mb-2">
+                    Upgrade your Account to Pro
+                    <img src="./img/medal.svg" alt="" class="size-[48px]">
+                </div>
+                <div class="poppins-regular text-[14px] text-cgray pr-[7px]">Upgrade to premium to get premium features</div>
+                <button
+                    class="hover:bg-db hover:text-white mt-8 text-white py-[9.5px] px-[22px] bg-green rounded-lg poppins-semibold text-[14px]">Upgrade</button>
+            </div>
+        </aside>
+        <section class="flex-1 h-screen flex flex-col">
+            <header class="py-[30px] pl-10 pr-[50px] bg-white flex items-center">
+                <div class="poppins-bold text-4xl">
+                    Courses
+                </div>
+                <form class="flex ml-[260px] gap-2 py-[14px] px-6 bg-colorgray rounded-2xl">
+                    <img src="./img/search.svg" alt="">
+                    <input type="text" placeholder="Kalit so’z bo’yicha qidiruv"
+                        class="bg-colorgray w-[425px] text-lg focus:outline-0">
+                </form>
+                <div class="flex items-center py-[16.5px] px-4 ml-[80px]">
+                    <img src="./img/usa.svg" alt="" class="size-6 overflow-hidden mr-[14px]">
+                    <div class="text-cblack poppins-semibold text-lg mr-4">Eng (US)</div>
+                    <img src="./img/down.svg" alt="" class="size-6 overflow-hidden">
+                </div>
+                <div class="flex ml-auto gap-2">
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/chat.svg" alt="">
+                    </button>
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/bell.svg" alt="">
+                    </button>
+                    <a href="#"
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center">
+                        <img src="./img/settings.svg" alt="">
+                    </a>
+                    <a href="#" class="relative ml-4 size-[60px] flex items-center justify-center overflow-hidden">
+                        <img src="./img/photo.jpg" alt="" class="rounded-2xl">
+                    </a>
+                </div>
+            </header>
+
+            <section class="flex-1 overflow-auto p-10">
+                <div class="flex gap-10">
+                    <div class="w-[488px] rounded-2xl bg-white flex flex-col items-center p-8 relative">
+                        <button class="absolute top-8 right-8"><img src="./img/dots.svg" alt=""></button>
+                        <div class="flex flex-col items-center mb-6">
+                            <img src="./img/lady.svg" alt="" class="rounded-2xl overflow-hidden size-[120px] mb-6">
+                            <div class="poppins-bold text-[24px] text-cblack mb-2">Nella Vita</div>
+                            <div class="poppins-regular text-[18px] text-cgray">Member Since 2020</div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-[30px]">
+                            <div
+                                class="rounded-2xl bg-cgray/10 py-[15px] pl-6 pr-[90px] poppins-bold text-[32px] text-cblack">
+                                <div class="poppins-regular text-lg  text-cgray mb-[4px]">Points</div>
+                                <div class="">2300</div>
+                            </div>
+                            <div
+                                class="rounded-2xl bg-cgray/10 py-[15px] pl-6 pr-[90px] poppins-bold text-[32px] text-cblack">
+                                <div class="poppins-regular text-lg  text-cgray mb-[4px]">Certificate</div>
+                                <div class="">50</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 poppins-bold text-[24px] text-cblack self-start mb-[22px]">
+                            <div>Achievements</div>
+                            <div class="flex gap-x-[11px]">
+                                <div class="p-4 bg-colorgray rounded-2xl flex justify-center items-center"><img
+                                        src="./img/cup.svg" alt=""></div>
+                                <div class="p-4 bg-colorgray rounded-2xl flex justify-center items-center"><img
+                                        src="./img/puzzle.svg" alt=""></div>
+                                <div class="p-4 bg-colorgray rounded-2xl flex justify-center items-center"><img
+                                        src="./img/planet.svg" alt=""></div>
+                                <div class="p-4 bg-colorgray rounded-2xl flex justify-center items-center"><img
+                                        src="./img/skill.svg" alt=""></div>
+                                <div class="p-4 bg-colorgray rounded-2xl flex justify-center items-center"><img
+                                        src="./img/time-read.svg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 poppins-bold text-[24px] text-cblack self-start mb-[22px]">
+                            <div>Bio</div>
+                            <div class="p-6 rounded-2xl bg-colorgray poppins-regular text-[14px] text-cgray">
+                                <p class="mb-9">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna
+                                    aliqua.
+                                </p>
+                                <p>
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                    ut aliquip ex ea
+                                    commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1">
+                        <div class="grid grid-cols-2 gap-10 mb-10">
+                            <div class="rounded-[24px] bg-white py-5 px-8">
+                                <div class="flex">
+                                    <img src="./img/certificate.svg" alt="" class="mr-10">
+                                    <div class="flex flex-col text-cblack poppins-bold text-[36px]">
+                                        <div>100</div>
+                                        <div class="poppins-regular text-[18px]">Courses Completed</div>
+                                    </div>
+                                    <button class="ml-auto"><img src="./img/right.svg" alt=""></button>
+                                </div>
+                            </div>
+                            <div class="rounded-[24px] bg-white py-5 px-8">
+                                <div class="flex">
+                                    <img src="./img/clock-time.svg" alt="" class="mr-10">
+                                    <div class="flex flex-col text-cblack poppins-bold text-[36px]">
+                                        <div>34</div>
+                                        <div class="poppins-regular text-[18px]">Courses Completed</div>
+                                    </div>
+                                    <button class="ml-auto"><img src="./img/yellow-right.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-y-4 mb-10">
+                            <div class="flex justify-between items-center">
+                                <div class="poppins-bold text-[24px] text-cblack">Current Courses</div>
+                                <div class="flex items-center gap-2 poppins-regular text-lg text-green">
+                                    View all
+                                    <img src="./img/right.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-10">
+                                <div class="rounded-2xl bg-white py-8 pl-[33px] pr-[78px]">
+                                    <div class="flex gap-x-[35px] items-center">
+                                        <div class="size-[150px] overflow-hidden">
+                                            <img src="./img/circle-bar.svg" alt="" class="size-[150px] overflow-hidden">
+                                        </div>
+                                        <div
+                                            class="flex flex-col poppins-semibold text-[18px] text-cblack gap-4 whitespace-nowrap">
+                                            <div class="flex flex-col gap-[4px]">
+                                                <div class="poppins-regular text-[14px] text-cgray">Class</div>
+                                                <div>UI Design Beginner</div>
+                                            </div>
+                                            <div class="flex flex-col gap-[4px]">
+                                                <div class="poppins-regular text-[14px] text-cgray">Total Courses</div>
+                                                <div>90 / 110</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl bg-white py-8 pl-[33px] pr-[78px]">
+                                    <div class="flex gap-x-[35px] items-center">
+                                        <div class="size-[150px] overflow-hidden">
+                                            <img src="./img/circle-bar-yellow.svg" alt=""
+                                                class="size-[150px] overflow-hidden">
+                                        </div>
+                                        <div
+                                            class="flex flex-col poppins-semibold text-[18px] text-cblack gap-4 whitespace-nowrap">
+                                            <div class="flex flex-col gap-[4px]">
+                                                <div class="poppins-regular text-[14px] text-cgray">Class</div>
+                                                <div>UX Research</div>
+                                            </div>
+                                            <div class="flex flex-col gap-[4px]">
+                                                <div class="poppins-regular text-[14px] text-cgray">Total Courses</div>
+                                                <div>50 / 80</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-[20px] py-8 pl-[36px] pr-8">
+                            <div class="flex items-center mb-8 poppins-regular whitespace-nowrap">
+                                <div class="poppins-bold text-[24px] text-cblack mr-[343px]">Progress</div>
+                                <div class="flex gap-6 items-center text-[14px] text-cgray">
+                                    <div class="flex items-center gap-2 overflow-hidden">
+                                        <div
+                                            class="border-[3px] rounded-full border-cyellow border-solid size-[12px] border-inset overflow-hidden">
+                                        </div>
+                                        Last Week
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="border-[3px] border-inset rounded-full border-green border-solid size-[12px] overflow-hidden">
+                                        </div>
+                                        This Week
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 py-[8px] px-[19px] bg-colorgray rounded-[8px] poppins-regular text-[14px] text-cblack ml-[44px]">
+                                    <div>This Week</div>
+                                    <img src="./img/down.svg" alt="">
+                                </div>
+                                <button class="overflow-hidden ml-6 size-6"><img src="./img/dots.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

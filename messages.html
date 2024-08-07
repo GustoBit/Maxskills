@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'min': '1535px' },
+                    'xl': { 'max': '1279px' },
+                    'lg': { 'max': '1023px' },
+                    'md': { 'max': '767px' },
+                    'sm': { 'max': '639px' },
+                },
+                extend: {
+                    colors: {
+                        green: '#4CBC9A',
+                        colorgray: '#FAFAFA',
+                        ccyan: '#3CC2E0',
+                        qora: '#363B64',
+                        gviolet: '#A098AE',
+                        cblack: '#374557',
+                        cyellow: '#FEC64F',
+                        cgray: '#A098AE',
+                        db: '#DBDBDB'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .active-link img,
+        .hover-img:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .active-link {
+            background-color: #4CBC9A;
+            color: #fff;
+        }
+        .hover-btn:hover > *:not(img) {
+            background-color: #fff;
+        }
+        .active {
+            background-color: #4CBC9A;
+            color: #fff;
+            scale: 1.1;
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="flex h-screen w-screen overflow-hidden bg-colorgray poppins-regular select-none">
+        <aside class="bg-white w-[345px] xl:w-[300px] xl:px-[20px] h-screen px-[46px] py-8">
+            <a href="#" class="block text-center text-4xl poppins-bold text-qora">
+                <span class="text-green text-[40px]">Max</span> Skills <span
+                    class="text-green text-[40px] -ml-[10px]">.</span>
+            </a>
+            <div class="flex flex-col gap-4 mt-[85px] xl:mt-[20px] xl:gap-2">
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/Apps.svg" alt="">
+                    Dashboard
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/open-book.svg" alt="">
+                    Courses
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/calendar.svg" alt="">
+                    Schedule
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4 active-link">
+                    <img src="./img/users.svg" alt="">
+                    Instructors
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/account.svg" alt="">
+                    Profile
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/check.svg" alt="">
+                    Activity
+                </a>
+            </div>
+            <div class="mt-[30px] rounded-2xl bg-white py-8 pl-8 pr-[25px] shadow-[0_20px_50px_0_rgba(55,69,87,0.25)]">
+                <div class="flex items-end poppins-bold text-[18px] text-cblack mb-2">
+                    Upgrade your Account to Pro
+                    <img src="./img/medal.svg" alt="" class="size-[48px]">
+                </div>
+                <div class="poppins-regular text-[14px] text-cgray pr-[7px]">Upgrade to premium to get premium features
+                </div>
+                <button
+                    class="hover:bg-db hover:text-white mt-8 text-white py-[9.5px] px-[22px] bg-green rounded-lg poppins-semibold text-[14px]">Upgrade</button>
+            </div>
+        </aside>
+        <section class="flex-1 h-screen flex flex-col">
+            <header class="py-[30px] pl-10 pr-[50px] bg-white flex items-center">
+                <div class="poppins-bold text-4xl">
+                    Message
+                </div>
+                <form class="flex ml-[240px] gap-2 py-[14px] px-6 bg-colorgray rounded-2xl">
+                    <img src="./img/search.svg" alt="">
+                    <input type="text" placeholder="Kalit so’z bo’yicha qidiruv"
+                        class="bg-colorgray w-[425px] text-lg focus:outline-0">
+                </form>
+                <div class="flex items-center py-[16.5px] px-4 ml-[80px]">
+                    <img src="./img/usa.svg" alt="" class="size-6 overflow-hidden mr-[14px]">
+                    <div class="text-cblack poppins-semibold text-lg mr-4">Eng (US)</div>
+                    <button class="hover:scale-[1.3]"><img src="./img/down.svg" alt=""
+                            class="size-6 overflow-hidden"></button>
+                </div>
+                <div class="flex ml-auto gap-2">
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/chat.svg" alt="">
+                    </button>
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/bell.svg" alt="">
+                    </button>
+                    <a href="#"
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center">
+                        <img src="./img/settings.svg" alt="">
+                    </a>
+                    <a href="#" class="relative ml-4 size-[60px] flex items-center justify-center overflow-hidden">
+                        <img src="./img/photo.jpg" alt="" class="rounded-2xl">
+                    </a>
+                </div>
+            </header>
+            <section class="flex-1 overflow-auto bg-white">
+                <div class="flex">
+                    <!-- FIRST -->
+                    <div class="pl-[14px] pr-[22px] flex flex-col w-[475px] overflow-auto pb-10">
+                        <div class="flex flex-col pt-10 gap-8 px-[17.5px] mb-[42px]">
+                            <div class="flex items-center gap-8">
+                                <a href="#"><img src="./img/nella.svg" alt="" class="rounded-[16px]"></a>
+                                <a href="#" class="flex flex-col gap-2">
+                                    <div class="poppins-bold text-2xl text-cblack">Nella Vita</div>
+                                    <div class="text-gviolet text-[18px]">Student</div>
+                                </a>
+                            </div>
+                            <div class="w-full h-[1px] bg-db"></div>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex justify-between items-center text-cblack">
+                                    <div class="poppins-semibold text-[18px]">Contacts</div>
+                                    <a href="#" class="text-[14px]">View All</a>
+                                </div>
+                                <div class="flex items-center gap-[23px]">
+                                    <a href="#" class="rounded-xl overflow-hidden"><img src="./img/acter1.svg"
+                                            alt=""></a>
+                                    <a href="#" class="rounded-xl overflow-hidden"><img src="./img/acter2.svg"
+                                            alt=""></a>
+                                    <a href="#" class="rounded-xl overflow-hidden"><img src="./img/acter3.svg"
+                                            alt=""></a>
+                                    <a href="#" class="rounded-xl overflow-hidden"><img src="./img/acter4.svg"
+                                            alt=""></a>
+                                    <a href="#" class="rounded-xl overflow-hidden"><img src="./img/acter5.svg"
+                                            alt=""></a>
+                                    <a href="#" class="rounded-xl overflow-hidden"><img src="./img/acter6.svg"
+                                            alt=""></a>
+                                </div>
+                            </div>
+                            <div class="w-full h-[1px] bg-db"></div>
+                        </div>
+                        <div class="flex flex-col gap-4 px-[17.5px] mb-6">
+                            <div class="poppins-semibold text-[18px] text-cblack">Chats</div>
+                            <div class="flex items-center poppins-semibold text-[14px]">
+                                <button class="flex flex-col flex-1 gap-4 items-center">
+                                    <div class="text-green">Private</div>
+                                    <div class="w-full bg-green h-[2px]"></div>
+                                </button>
+                                <button class="flex flex-col flex-1 gap-4 items-center group">
+                                    <div class="text-cgray group-hover:text-green">Group</div>
+                                    <div class="w-full bg-db h-[2px] group-hover:bg-green"></div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[2px] h-[439px] overflow-auto">
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/enshteyn.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Samantha William</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/soap.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white hidden">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Tony Soap</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-db pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/karen.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Karen Hope</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/ahmad.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Johnny Ahmad</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/nadila.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white hidden">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Nadila Adja</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/nadila.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white hidden">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Nadila Adja</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/nadila.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white hidden">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Nadila Adja</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/nadila.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white hidden">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Nadila Adja</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/nadila.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white hidden">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Nadila Adja</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/nadila.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white hidden">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Nadila Adja</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                            <a href="#"
+                                class="flex flex-col gap-[22px] rounded-[16px] bg-white pt-4 px-[18px] hover:bg-db">
+                                <div class="flex">
+                                    <div class="size-[60px] relative">
+                                        <img src="./img/nadila.svg" alt="" class="rounded-[16px]">
+                                        <div
+                                            class="absolute bottom-0 right-0 size-4 bg-green rounded ring-2 ring-inset ring-white hidden">
+                                        </div>
+                                    </div>
+                                    <div class="ml-4 flex flex-col gap-2">
+                                        <div class="poppins-semibold text-[18px] text-cblack">Nadila Adja</div>
+                                        <div class="text-cgray text-[14px]">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                    <div class="flex flex-col gap-[11px] ml-auto">
+                                        <div class="text-cgray text-[14px]">12:45 PM</div>
+                                        <div
+                                            class="size-6 rounded-lg bg-green text-white flex items-center justify-center ml-auto">
+                                            2</div>
+                                    </div>
+                                </div>
+                                <div class="bg-db w-full h-[1px]"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- FIRST END -->
+                    <!-- SECOND -->
+                    <div class="flex flex-col bg-colorgray pt-10 pr-10 pb-8 pl-8">
+                        <button class="flex items-center gap-6 mb-[29px]">
+                            <img src="./img/hope.svg" alt="" class="rounded-[16px]">
+                            <div class="flex flex-col gap-1">
+                                <div class="poppins-bold text-[24px] text-cblack">Karen Hope</div>
+                                <div class="flex items-center gap-2 text-cgray">
+                                    <div class="rounded-full size-2 bg-green text-[18px]"></div>
+                                    Online
+                                </div>
+                            </div>
+                        </button>
+                        <div class="bg-db w-full h-[1px] mb-8"></div>
+                        <div class="py-[16.5px] px-[30.5px] rounded-[16px] bg-db text-[18px] w-fit text-cblack mb-4">
+                            Hello Nella!</div>
+                        <div class="py-[16.5px] px-[30.5px] rounded-[16px] bg-db text-[18px] w-fit text-cblack mb-2">Can
+                            you arrange schedule for next meeting?</div>
+                        <div class="text-[14px] w-fit text-cgray mb-10">12:45 PM</div>
+                        <div
+                            class="py-[16.5px] px-[30.5px] rounded-[16px] bg-green text-[18px] w-fit text-white mb-4 ml-auto">
+                            Hello Karen!</div>
+                        <div
+                            class="py-[16.5px] px-[30.5px] rounded-[16px] bg-green text-[18px] w-fit text-white mb-4 ml-auto">
+                            Okay, I’ll arrange it soon. i noftify you
+                            when it’s done
+                        </div>
+                        <div class="text-[14px] w-fit text-cgray ml-auto">12:45 PM</div>
+                        <form class="flex items-center p-4 gap-4 bg-white rounded-[16px] ring-2 ring-db mt-auto">
+                            <input type="text" placeholder="Write your message..." name="send" id="send"
+                                class="w-[398px] pl-4 py-[9px] outline-0">
+                            <button><img src="./img/attachment.svg" alt=""></button>
+                            <button
+                                class="flex items-center gap-2 bg-green py-[9px] rounded-[12px] px-[19px] poppins-semibold text-white text-[18px]">
+                                Send
+                                <img src="./img/send.svg" alt="">
+                            </button>
+                        </form>
+                    </div>
+                    <!-- SECOND END -->
+                    <!-- THIRD -->
+                    <div class="mt-10 mr-[49px] mb-[117px] ml-10 h-fit">
+                        <div class="flex flex-col gap-8 text-cblack mb-6">
+                            <div class="flex gap-8 items-center self-center">
+                                <button
+                                    class="size-[48px] rounded-xl bg-db flex items-center justify-center hover:bg-green/70 group">
+                                    <img src="./img/phone.svg" alt="" class="group-hover:scale-[1.1]">
+                                </button>
+                                <button
+                                    class="size-[48px] rounded-xl bg-db flex items-center justify-center hover:bg-green/70 group">
+                                    <img src="./img/camera.svg" alt="" class="group-hover:scale-[1.1]">
+                                </button>
+                                <button
+                                    class="size-[48px] rounded-xl bg-db flex items-center justify-center hover:bg-green/70 group">
+                                    <img src="./img/dotss.svg" alt="" class="group-hover:scale-[1.1]">
+                                </button>
+                            </div>
+                            <div class="w-full h-[1px] bg-db"></div>
+                            <div class="flex items-center justify-between">
+                                <div class="poppins-semibold text-[18px]">Shared Files</div>
+                                <a href="#" class="text-green text-[14px] hover:scale-[1.05]">View All</a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 poppins-semibold text-[14px] mb-8">
+                            <a href="#" class="flex items-center gap-4 hover:bg-db/20">
+                                <div class="size-10 rounded-lg bg-db flex items-center justify-center"><img
+                                        src="./img/filed.svg" alt=""></div>
+                                <div class="flex flex-col gap-1">
+                                    File.doc
+                                    <div class="poppins-regular text-cgray">2 March 2021, 13:45 PM</div>
+                                </div>
+                                <div class="ml-auto">1,5 Mb</div>
+                            </a>
+                            <a href="#" class="flex items-center gap-4 hover:bg-db/20">
+                                <div class="size-10 rounded-lg bg-db flex items-center justify-center"><img
+                                        src="./img/filed.svg" alt=""></div>
+                                <div class="flex flex-col gap-1">
+                                    File.jpg
+                                    <div class="poppins-regular text-cgray">2 March 2021, 13:45 PM</div>
+                                </div>
+                                <div class="ml-auto">1,5 Mb</div>
+                            </a>
+                            <a href="#" class="flex items-center gap-4 hover:bg-db/20">
+                                <div class="size-10 rounded-lg bg-db flex items-center justify-center"><img
+                                        src="./img/filed.svg" alt=""></div>
+                                <div class="flex flex-col gap-1">
+                                    File.pdf
+                                    <div class="poppins-regular text-cgray">2 March 2021, 13:45 PM</div>
+                                </div>
+                                <div class="ml-auto">1,5 Mb</div>
+                            </a>
+                            <a href="#" class="flex items-center gap-4 hover:bg-db/20">
+                                <div class="size-10 rounded-lg bg-db flex items-center justify-center"><img
+                                        src="./img/filed.svg" alt=""></div>
+                                <div class="flex flex-col gap-1">
+                                    File.doc
+                                    <div class="poppins-regular text-cgray">2 March 2021, 13:45 PM</div>
+                                </div>
+                                <div class="ml-auto">1,5 Mb</div>
+                            </a>
+                        </div>
+                        <div class="w-full h-[1px] bg-db mb-8"></div>
+                        <div class="flex items-center justify-between mb-[25px]">
+                            <div class="poppins-semibold text-[18px]">Shared Files</div>
+                            <a href="#" class="text-green text-[14px] hover:scale-[1.05]">View All</a>
+                        </div>
+                        <div class="flex flex-col gap-4 poppins-semibold text-[14px]">
+                            <a href="#" class="flex items-center gap-4 hover:bg-db/20">
+                                <div class="size-10 rounded-lg bg-db flex items-center justify-center"><img
+                                        src="./img/link.svg" alt=""></div>
+                                <div class="flex flex-col gap-1">
+                                    facebook.com
+                                    <div class="poppins-regular text-cgray">2 March 2021</div>
+                                </div>
+                                <div class="ml-auto text-cgray">13:45 PM</div>
+                            </a>
+                            <a href="#" class="flex items-center gap-4 hover:bg-db/20">
+                                <div class="size-10 rounded-lg bg-db flex items-center justify-center"><img
+                                        src="./img/link.svg" alt=""></div>
+                                <div class="flex flex-col gap-1">
+                                    twitter.com
+                                    <div class="poppins-regular text-cgray">2 March 2021</div>
+                                </div>
+                                <div class="ml-auto text-cgray">13:45 PM</div>
+                            </a>
+                            <a href="#" class="flex items-center gap-4 hover:bg-db/20">
+                                <div class="size-10 rounded-lg bg-db flex items-center justify-center"><img
+                                        src="./img/link.svg" alt=""></div>
+                                <div class="flex flex-col gap-1">
+                                    google.com
+                                    <div class="poppins-regular text-cgray">2 March 2021</div>
+                                </div>
+                                <div class="ml-auto text-cgray">13:45 PM</div>
+                            </a>
+                            <a href="#" class="flex items-center gap-4 hover:bg-db/20">
+                                <div class="size-10 rounded-lg bg-db flex items-center justify-center"><img
+                                        src="./img/link.svg" alt=""></div>
+                                <div class="flex flex-col gap-1">
+                                    dribbble.com
+                                    <div class="poppins-regular text-cgray">2 March 2021</div>
+                                </div>
+                                <div class="ml-auto text-cgray">13:45 PM</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- THIRD END -->
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<svg width="144" height="131" viewBox="0 0 144 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.5" y="7.97095" width="144" height="1" rx="0.5" fill="#DBDBDB"/>
+<rect opacity="0.5" y="36.9709" width="144" height="1" rx="0.5" fill="#DBDBDB"/>
+<rect opacity="0.5" y="65.9709" width="144" height="1" rx="0.5" fill="#DBDBDB"/>
+<rect opacity="0.5" y="94.9709" width="144" height="1" rx="0.5" fill="#DBDBDB"/>
+<rect opacity="0.5" y="123.971" width="144" height="1" rx="0.5" fill="#DBDBDB"/>
+<path opacity="0.5" d="M18 0.970947V130.971" stroke="#DBDBDB"/>
+<path opacity="0.5" d="M54 0.970947V130.971" stroke="#DBDBDB"/>
+<path opacity="0.5" d="M90 0.970947V130.971" stroke="#DBDBDB"/>
+<path opacity="0.5" d="M126 0.970947V130.971" stroke="#DBDBDB"/>
+<path d="M6 108.971L8.40741 99.9675C10.8148 90.964 15.6296 72.9571 20.4444 68.4877C25.2593 64.0183 30.0741 73.0864 34.8889 80.0245C39.7037 86.9626 44.5185 91.7707 49.3333 85.8041C54.1482 79.8375 58.963 63.0963 63.7778 64.97C68.5926 66.8437 73.4074 87.3323 78.2222 90.7049C83.037 94.0774 87.8519 80.3339 92.6667 69.9137C97.4815 59.4935 102.296 52.3965 107.111 51.7815C111.926 51.1665 116.741 57.0335 121.556 54.4787C126.37 51.924 131.185 40.9474 133.593 35.4592L136 29.9709" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<circle cx="108" cy="52.9709" r="7" fill="white" stroke="#FEC64F" stroke-width="4"/>
+</svg>

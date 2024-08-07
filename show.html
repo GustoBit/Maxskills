@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'min': '1535px' },
+                    'xl': { 'max': '1279px' },
+                    'lg': { 'max': '1023px' },
+                    'md': { 'max': '767px' },
+                    'sm': { 'max': '639px' },
+                },
+                extend: {
+                    colors: {
+                        green: '#4CBC9A',
+                        colorgray: '#FAFAFA',
+                        ccyan: '#3CC2E0',
+                        qora: '#363B64',
+                        gviolet: '#A098AE',
+                        cblack: '#374557',
+                        cyellow: '#FEC64F',
+                        cgray: '#A098AE',
+                        orange: '#FC6B57',
+                        db: '#DBDBDB'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .active-link img,
+        .hover-img:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .active-link {
+            background-color: #4CBC9A;
+            color: #fff;
+        }
+        .hover-btn:hover > *:not(img) {
+            background-color: #fff;
+        }
+        .hover-scale img {
+            transition: linear 0.3s;
+        }
+        .hover-scale:hover img {
+            transform: scale(1.2);
+        }
+        .before-check li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-basis: 34%;
+            white-space: nowrap;
+        }
+        .before-check li::before {
+            content: '';
+            background-image: url('./img/check-cicle.svg');
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat-
+        }
+        .blocks {
+            height: calc(100vh - 305px);
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="flex h-screen w-screen overflow-hidden bg-colorgray poppins-regular select-none">
+        <aside class="bg-white w-[345px] xl:w-[300px] xl:px-[20px] h-screen px-[46px] py-8">
+            <a href="#" class="block text-center text-4xl poppins-bold text-qora">
+                <span class="text-green text-[40px]">Max</span> Skills <span class="text-green text-[40px] -ml-[10px]">.</span>
+            </a>
+            <div class="flex flex-col gap-4 mt-[85px] xl:mt-[20px] xl:gap-2">
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/Apps.svg" alt="">
+                    Dashboard
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4 active-link">
+                    <img src="./img/open-book.svg" alt="">
+                    Courses
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/calendar.svg" alt="">
+                    Schedule
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/users.svg" alt="">
+                    Instructors
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/account.svg" alt="">
+                    Profile
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/check.svg" alt="">
+                    Activity
+                </a>
+            </div>
+            <div class="mt-[30px] rounded-2xl bg-white py-8 pl-8 pr-[25px] shadow-[0_20px_50px_0_rgba(55,69,87,0.25)]">
+                <div class="flex items-end poppins-bold text-[18px] text-cblack mb-2">
+                    Upgrade your Account to Pro
+                    <img src="./img/medal.svg" alt="" class="size-[48px]">
+                </div>
+                <div class="poppins-regular text-[14px] text-cgray pr-[7px]">Upgrade to premium to get premium features</div>
+                <button
+                    class="hover:bg-db hover:text-white mt-8 text-white py-[9.5px] px-[22px] bg-green rounded-lg poppins-semibold text-[14px]">Upgrade</button>
+            </div>
+        </aside>
+        <section class="flex-1 h-screen flex flex-col">
+            <header class="py-[30px] pl-10 pr-[50px] bg-white flex items-center">
+                <div class="poppins-bold text-4xl">
+                    Courses
+                </div>
+                <form class="flex ml-[260px] gap-2 py-[14px] px-6 bg-colorgray rounded-2xl">
+                    <img src="./img/search.svg" alt="">
+                    <input type="text" placeholder="Kalit so’z bo’yicha qidiruv"
+                        class="bg-colorgray w-[425px] text-lg focus:outline-0">
+                </form>
+                <div class="flex items-center py-[16.5px] px-4 ml-[80px]">
+                    <img src="./img/usa.svg" alt="" class="size-6 overflow-hidden mr-[14px]">
+                    <div class="text-cblack poppins-semibold text-lg mr-4">Eng (US)</div>
+                    <img src="./img/down.svg" alt="" class="size-6 overflow-hidden">
+                </div>
+                <div class="flex ml-auto gap-2">
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/chat.svg" alt="">
+                    </button>
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/bell.svg" alt="">
+                    </button>
+                    <a href="#"
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center">
+                        <img src="./img/settings.svg" alt="">
+                    </a>
+                    <a href="#" class="relative ml-4 size-[60px] flex items-center justify-center overflow-hidden">
+                        <img src="./img/photo.jpg" alt="" class="rounded-2xl">
+                    </a>
+                </div>
+            </header>
+            <section class="flex-1 overflow-auto p-10">
+                <div class="flex gap-10">
+                    <div class="flex-1">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="text-4xl text-cblack poppins-bold mb-4">
+                                    Full-Stack Web Developer
+                                </div>
+                                <div class="flex items-center divide-x text-lg mb-6">
+                                    <div class="flex gap-2 pr-4 poppins-medium items-center">
+                                        5.0
+                                        <img src="./img/star.svg" alt="">
+                                    </div>
+                                    <div class="px-4 text-gviolet">
+                                        Review (1k)
+                                    </div>
+                                    <div class="px-4 text-gviolet">
+                                        10k Students
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6 pt-3">
+                                <a href="#"><img src="./img/calendar-show.svg" alt=""></a>
+                                <a href="#"><img src="./img/bookmarks.svg" alt=""></a>
+                                <a href="#"><img src="./img/share.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <iframe class="w-full aspect-video rounded-2xl mb-[54px]"
+                            src="https://www.youtube.com/embed/x3MTfp3HDLc?si=o-XzhlBLYnQoZyMs"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+
+                        <div class="flex">
+                            <nav class="flex mb-8 border-b-[1px] border-gray-300 gap-10 text-sm font-medium text-gray-500"
+                                aria-label="Tabs">
+                                <a href="#" class="text-green relative py-4" aria-current="page">
+                                    <span>About</span>
+                                    <span aria-hidden="true" class="bg-green absolute inset-x-0 bottom-0 h-0.5"></span>
+                                </a>
+                                <a href="#" class="relative py-4 hover:text-green group">
+                                    <span>Reviews</span>
+                                    <span aria-hidden="true"
+                                        class="bg-transparent absolute inset-x-0 bottom-0 h-0.5 group-hover:bg-green"></span>
+                                </a>
+                                <a href="#" class="relative py-4 hover:text-green group">
+                                    <span>Discussion</span>
+                                    <span aria-hidden="true"
+                                        class="bg-transparent absolute inset-x-0 bottom-0 h-0.5 group-hover:bg-green"></span>
+                                </a>
+                            </nav>
+                        </div>
+
+                        <div class="text-2xl text-cblack poppins-bold mb-4">About Course</div>
+                        <div class="text-lg text-gviolet mb-6 space-y-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna
+                                aliqua.</p>
+                        </div>
+
+                    </div>
+                    <div class="w-[459px] pr-[10px]">
+                        <div class="p-6 bg-white rounded-2xl space-y-4">
+                            <div class="flex justify-between">
+                                <div class="text-cblack text-2xl poppins-bold">Progress</div>
+                                <button><img src="./img/dots.svg" alt=""></button>
+                            </div>
+                            <div>
+                                <div class="bg-colorgray rounded overflow-hidden mb-[10px]">
+                                    <div class="bg-green h-4 rounded w-4/12"></div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="poppins-semibold text-same text-cblack">Full-Stack Web Developer</div>
+                                    <div class="text-sm text-gray-400">10/110</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col gap-6 pt-6 overflow-auto blocks scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:bg-slate-300 scrollbar-track:!rounded dark:scrollbar-track:!bg-slate-500/[0.16] dark:scrollbar-thumb:!bg-slate-500/50 lg:supports-scrollbars:pr-2">
+                            <div class="bg-white p-6 rounded-2xl text-cblack">
+                                <div class="flex justify-between items-center mb-6">
+                                    <div class="text-2xl poppins-bold">Video Courses</div>
+                                    <div class="flex items-center text-lg poppins-semibold gap-2">
+                                        (1/110)
+                                        <button class="size-8 rounded-2xl bg-green flex items-center justify-center">
+                                            <img src="./img/bottom.svg" alt="" class="brightness-0 invert rotate-180">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div
+                                        class="py-5 text-lg text-white px-6 bg-green rounded-2xl flex items-center hover:bg-green hover:text-white group">
+                                        <div class="size-8 mr-4 rounded-2xl bg-white flex items-center justify-center">
+                                            <svg class="size-[16px] group-hover:fill-green" viewBox="0 0 16 16"
+                                                fill="#4CBC9A" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4 13C3.817 13 3.635 12.95 3.474 12.851C3.32918 12.7611 3.20965 12.6358 3.12671 12.4869C3.04378 12.338 3.00016 12.1704 3 12V4C3 3.653 3.18 3.331 3.474 3.149C3.61914 3.05976 3.7846 3.00891 3.95481 3.00121C4.12502 2.99351 4.29439 3.02923 4.447 3.105L12.447 7.105C12.6131 7.1882 12.7528 7.31599 12.8504 7.47405C12.948 7.63212 12.9997 7.81423 12.9997 8C12.9997 8.18578 12.948 8.36789 12.8504 8.52595C12.7528 8.68402 12.6131 8.8118 12.447 8.895L4.447 12.895C4.307 12.965 4.152 13 4 13V13Z" />
+                                            </svg>
+                                        </div>
+                                        Introduction
+                                        <div class="ml-auto">1:00</div>
+                                    </div>
+                                    <div
+                                        class="py-5 text-lg text-cblack px-6 bg-db rounded-2xl flex items-center group hover:bg-green hover:text-white">
+                                        <div class="size-8 mr-4 rounded-2xl bg-white flex items-center justify-center">
+                                            <svg class="size-[16px] group-hover:fill-green" viewBox="0 0 16 16"
+                                                fill="#374557" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.3337 6V4.66666C11.3337 2.79999 9.86699 1.33333 8.00033 1.33333C6.13366 1.33333 4.66699 2.79999 4.66699 4.66666V6C3.53366 6 2.66699 6.86666 2.66699 8V12.6667C2.66699 13.8 3.53366 14.6667 4.66699 14.6667H11.3337C12.467 14.6667 13.3337 13.8 13.3337 12.6667V8C13.3337 6.86666 12.467 6 11.3337 6ZM6.00033 4.66666C6.00033 3.53333 6.86699 2.66666 8.00033 2.66666C9.13366 2.66666 10.0003 3.53333 10.0003 4.66666V6H6.00033V4.66666ZM8.66699 11.3333C8.66699 11.7333 8.40033 12 8.00033 12C7.60033 12 7.33366 11.7333 7.33366 11.3333V9.33333C7.33366 8.93333 7.60033 8.66666 8.00033 8.66666C8.40033 8.66666 8.66699 8.93333 8.66699 9.33333V11.3333Z" />
+                                            </svg>
+                                        </div>
+                                        Introduction
+                                        <div class="ml-auto">1:00</div>
+                                    </div>
+                                    <div
+                                        class="py-5 text-lg text-cblack px-6 bg-db rounded-2xl flex items-center group hover:bg-green hover:text-white">
+                                        <div class="size-8 mr-4 rounded-2xl bg-white flex items-center justify-center">
+                                            <svg class="size-[16px] group-hover:fill-green" viewBox="0 0 16 16"
+                                                fill="#374557" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.3337 6V4.66666C11.3337 2.79999 9.86699 1.33333 8.00033 1.33333C6.13366 1.33333 4.66699 2.79999 4.66699 4.66666V6C3.53366 6 2.66699 6.86666 2.66699 8V12.6667C2.66699 13.8 3.53366 14.6667 4.66699 14.6667H11.3337C12.467 14.6667 13.3337 13.8 13.3337 12.6667V8C13.3337 6.86666 12.467 6 11.3337 6ZM6.00033 4.66666C6.00033 3.53333 6.86699 2.66666 8.00033 2.66666C9.13366 2.66666 10.0003 3.53333 10.0003 4.66666V6H6.00033V4.66666ZM8.66699 11.3333C8.66699 11.7333 8.40033 12 8.00033 12C7.60033 12 7.33366 11.7333 7.33366 11.3333V9.33333C7.33366 8.93333 7.60033 8.66666 8.00033 8.66666C8.40033 8.66666 8.66699 8.93333 8.66699 9.33333V11.3333Z" />
+                                            </svg>
+                                        </div>
+                                        Introduction
+                                        <div class="ml-auto">1:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl flex justify-between items-center text-cblack">
+                                <div class="text-2xl poppins-bold">Audio</div>
+                                <div class="flex items-center text-lg poppins-semibold gap-2">
+                                    (1/25)
+                                    <button class="size-8 rounded-2xl bg-green/25 flex items-center justify-center">
+                                        <img src="./img/bottom.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

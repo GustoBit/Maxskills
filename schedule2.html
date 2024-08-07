@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    '2xl': { 'min': '1535px' },
+                    'xl': { 'max': '1279px' },
+                    'lg': { 'max': '1023px' },
+                    'md': { 'max': '767px' },
+                    'sm': { 'max': '639px' },
+                },
+                extend: {
+                    colors: {
+                        green: '#4CBC9A',
+                        colorgray: '#FAFAFA',
+                        ccyan: '#3CC2E0',
+                        qora: '#363B64',
+                        gviolet: '#A098AE',
+                        cblack: '#374557',
+                        cyellow: '#FEC64F',
+                        cgray: '#A098AE',
+                        db: '#DBDBDB',
+                        corange: '#FC6B57',
+                        cpink: '#FFBABF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .active-link img,
+        .hover-img:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .active-link {
+            background-color: #4CBC9A;
+            color: #fff;
+        }
+        .hover-btn:hover > *:not(img) {
+            background-color: #fff;
+        }
+        .active {
+            background-color: #4CBC9A;
+            color: #fff;
+            scale: 1.1;
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="flex h-screen w-screen overflow-hidden bg-colorgray poppins-regular select-none">
+        <aside class="bg-white w-[345px] xl:w-[300px] xl:px-[20px] h-screen px-[46px] py-8">
+            <a href="#" class="block text-center text-4xl poppins-bold text-qora">
+                <span class="text-green text-[40px]">Max</span> Skills <span
+                    class="text-green text-[40px] -ml-[10px]">.</span>
+            </a>
+            <div class="flex flex-col gap-4 mt-[85px] xl:mt-[20px] xl:gap-2">
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4 active-link">
+                    <img src="./img/Apps.svg" alt="">
+                    Dashboard
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/open-book.svg" alt="">
+                    Courses
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/calendar.svg" alt="">
+                    Schedule
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/users.svg" alt="">
+                    Instructors
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/account.svg" alt="">
+                    Profile
+                </a>
+                <a href="#"
+                    class="py-4 px-6 rounded-2xl flex gap-6 text-lg text-gviolet items-center hover:bg-green hover:text-white rounded-lg hover:text-white hover:text-white hover-img xl:py-2 xl:px-4">
+                    <img src="./img/check.svg" alt="">
+                    Activity
+                </a>
+            </div>
+            <div class="mt-[30px] rounded-2xl bg-white py-8 pl-8 pr-[25px] shadow-[0_20px_50px_0_rgba(55,69,87,0.25)]">
+                <div class="flex items-end poppins-bold text-[18px] text-cblack mb-2">
+                    Upgrade your Account to Pro
+                    <img src="./img/medal.svg" alt="" class="size-[48px]">
+                </div>
+                <div class="poppins-regular text-[14px] text-cgray pr-[7px]">Upgrade to premium to get premium features
+                </div>
+                <button
+                    class="hover:bg-db hover:text-white mt-8 text-white py-[9.5px] px-[22px] bg-green rounded-lg poppins-semibold text-[14px]">Upgrade</button>
+            </div>
+        </aside>
+        <section class="flex-1 h-screen flex flex-col">
+            <header class="py-[30px] pl-10 pr-[50px] bg-white flex items-center">
+                <div class="poppins-bold text-4xl">
+                    Dashboard
+                </div>
+                <form class="flex ml-[200px] gap-2 py-[14px] px-6 bg-colorgray rounded-2xl">
+                    <img src="./img/search.svg" alt="">
+                    <input type="text" placeholder="Kalit so’z bo’yicha qidiruv"
+                        class="bg-colorgray w-[425px] text-lg focus:outline-0">
+                </form>
+                <div class="flex items-center py-[16.5px] px-4 ml-[80px]">
+                    <img src="./img/usa.svg" alt="" class="size-6 overflow-hidden mr-[14px]">
+                    <div class="text-cblack poppins-semibold text-lg mr-4">Eng (US)</div>
+                    <button class="hover:scale-[1.3]"><img src="./img/down.svg" alt=""
+                            class="size-6 overflow-hidden"></button>
+                </div>
+                <div class="flex ml-auto gap-2">
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/chat.svg" alt="">
+                    </button>
+                    <button
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center hover-btn">
+                        <span class="size-2 bg-green rounded absolute right-2.5 top-2.5"></span>
+                        <img src="./img/bell.svg" alt="">
+                    </button>
+                    <a href="#"
+                        class="relative hover:bg-green hover:text-white rounded-lg hover:text-white rounded-2xl hover-img size-[60px] flex items-center justify-center">
+                        <img src="./img/settings.svg" alt="">
+                    </a>
+                    <a href="#" class="relative ml-4 size-[60px] flex items-center justify-center overflow-hidden">
+                        <img src="./img/photo.jpg" alt="" class="rounded-2xl">
+                    </a>
+                </div>
+            </header>
+            <section class="flex-1 overflow-auto py-10 pr-[50px] pl-10">
+                <div class="grid grid-cols-[1007px_auto] gap-x-10">
+                    <section class="p-8 bg-white rounded-[14px] h-[880px]">
+                        <div class="lg:grid lg:grid-cols-12 lg:gap-x-16 h-full">
+                            <div
+                                class=" text-center lg:col-start-8 lg:col-end-13 lg:row-start-1 lg:mt-9 xl:col-start-9">
+                                <div class="flex items-center text-gray-900 justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <button type="button"
+                                            class="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500">
+                                            <span class="sr-only">Previous month</span>
+                                            <svg class="size-8" viewBox="0 0 20 20" fill="currentColor"
+                                                aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </button>
+                                        <div class="flex-auto text-[32px] poppins-bold text-cblack">January, 2022</div>
+                                        <button type="button"
+                                            class="-m-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500">
+                                            <span class="sr-only">Next month</span>
+                                            <svg class="size-8" viewBox="0 0 20 20" fill="currentColor"
+                                                aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <button
+                                        class="py-[16.5px] px-[27px] rounded-xl bg-green poppins-semibold text-lg text-white hover:bg-green/90">+
+                                        New Schedule</button>
+                                </div>
+                                <div
+                                    class="mt-[47px] mb-8 grid grid-cols-7 text-lg leading-6 text-cgray poppins-semibold">
+                                    <div>Monday</div>
+                                    <div>Tuesday</div>
+                                    <div>Wednesday</div>
+                                    <div>Thursday</div>
+                                    <div>Friday</div>
+                                    <div>Saturday</div>
+                                    <div>Sunday</div>
+                                </div>
+                                <div
+                                    class="mt-2 grid grid-cols-7 gap-px rounded-lg ring-1 ring-db text-lg poppins-bold text-cblack relative">
+                                    <button type="submit"
+                                        class="absolute py-4 pr-[37px] pl-4 bg-white rounded-lg border-l-[18px] border-corange flex flex-col gap-1 items-start text-[14px] top-[43px] left-[159px] hover:bg-db/50">
+                                        <div class="poppins-semibold text-cblack">UX Research</div>
+                                        <div class="text-cgray poppins-regular">10.00 AM</div>
+                                    </button>
+                                    <button type="submit"
+                                        class="absolute py-4 pr-[37px] pl-4 bg-white rounded-lg border-l-[18px] border-corange flex flex-col gap-1 items-start text-[14px] bottom-[138px] left-[159px] hover:bg-db/50">
+                                        <div class="poppins-semibold text-cblack">UX Research</div>
+                                        <div class="text-cgray poppins-regular">10.00 AM</div>
+                                    </button>
+                                    <button type="submit"
+                                        class="absolute py-4 pr-[37px] pl-4 bg-white rounded-lg border-l-[18px] border-cyellow flex flex-col gap-1 items-start text-[14px] top-[171px] left-[428px] hover:bg-db/50">
+                                        <div class="poppins-semibold text-cblack">UX Research</div>
+                                        <div class="text-cgray poppins-regular">10.00 AM</div>
+                                    </button>
+                                    <button type="submit"
+                                        class="absolute py-4 pr-[37px] pl-4 bg-white rounded-lg border-l-[18px] border-green flex flex-col gap-1 items-start text-[14px] bottom-[137px] right-[84px] hover:bg-db/50">
+                                        <div class="poppins-semibold text-cblack">UX Research</div>
+                                        <div class="text-cgray poppins-regular">10.00 AM</div>
+                                    </button>
+
+                                    <button type="button"
+                                        class="text-gray-500 hover:bg-green hover:text-white rounded-tl-lg bg-db/25 hover:text-white pt-[10px] pr-[93px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2021-12-31"
+                                            class="mx-auto flex items-center justify-center rounded-full">
+                                            31
+                                        </time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pr-[103px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">1</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pr-[100px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">2</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pr-[100px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">3</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pr-[98px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">4</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pr-[98px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">5</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-white text-gray-900 hover:bg-green hover:text-white rounded-tr-lg hover:text-white pt-[10px] pr-[99px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">6</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pr-[101px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">7</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pr-[98px] pb-[93px] pl-6 ring-1 ring-db">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">8</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[99px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">9</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[92px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">10</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[97px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">11</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[92px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">12</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[93px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">13</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[92px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">14</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[91px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">15</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[92px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">16</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[94px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">17</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[92px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">18</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[92px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">19</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[88px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">20</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[93px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">21</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[89px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">22</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[89px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">23</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[88px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">24</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[89px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">25</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[88px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">26</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[91px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">27</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[89px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">28</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[88px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">29</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[88px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">30</time>
+                                    </button>
+                                    <button type="button" class="bg-white text-gray-900 hover:bg-green hover:text-white hover:text-white pt-[10px] pb-[93px] pl-6 ring-1 ring-db
+                                        pr-[93px]">
+                                        <time datetime="2022-01-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">31</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-gray-50 text-gray-400 hover:bg-green hover:text-white bg-db hover:text-white ring-1 ring-db pt-[10px] pl-6 pb-[93px] pr-[104px]">
+                                        <time datetime="2022-02-01"
+                                            class="mx-auto flex items-center justify-center rounded-full">1</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-gray-50 text-gray-400 hover:bg-green hover:text-white bg-db hover:text-white ring-1 ring-db pt-[10px] pl-6 pb-[93px] pr-[104px]">
+                                        <time datetime="2022-02-02"
+                                            class="mx-auto flex items-center justify-center rounded-full">2</time>
+                                    </button>
+                                    <button type="button"
+                                        class="bg-gray-50 text-gray-400 hover:bg-green hover:text-white bg-db hover:text-white rounded-br-lg ring-1 ring-db pt-[10px] pl-6 pb-[93px] pr-[104px]">
+                                        <time datetime="2022-02-03"
+                                            class="mx-auto flex items-center justify-center rounded-full">3</time>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <aside class="grid grid-rows-[498px_276px] gap-10">
+                        <div class="bg-white p-8 rounded-xl flex flex-col gap-6">
+                            <div class="poppins-bold text-[24px] text-cblack">Upcoming Task</div>
+                            <div class="flex flex-col gap-[21px] relative">
+                                <a href="#"
+                                    class="absolute top-[83px] left-[61px] rounded-lg bg-green py-[13.5px] px-[23px] flex items-center gap-2 poppins-semibold text-[14px] text-white">
+                                    <div class="size-2 rounded-full bg-white"></div>
+                                    Meeting
+                                </a>
+                                <a href="#"
+                                    class="absolute top-[192px] left-[195px] rounded-lg bg-cyellow py-[13.5px] px-[23px] flex items-center gap-2 poppins-semibold text-[14px] text-white">
+                                    <div class="size-2 rounded-full bg-white"></div>
+                                    Web Design
+                                </a>
+                                <a href="#"
+                                    class="absolute bottom-[35px] left-[128px] rounded-lg bg-corange py-[13.5px] px-[23px] flex items-center gap-2 poppins-semibold text-[14px] text-white">
+                                    <div class="size-2 rounded-full bg-white"></div>
+                                    Evaluate
+                                </a>
+                                <div class="flex items-center gap-8 ml-auto poppins-medium text-[14px] text-cgray">
+                                    <div>8 AM</div>
+                                    <div>9 AM</div>
+                                    <div>10 AM</div>
+                                    <div>11 AM</div>
+                                    <div>12 AM</div>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-[31px] poppins-regular text-[14px] text-cgray">
+                                        <div>Mon</div>
+                                        <div class="border-[1px] border-dashed w-full border-cgray"></div>
+                                    </div>
+                                    <div class="flex items-center gap-[31px] poppins-regular text-[14px] text-cgray">
+                                        <div>Tue</div>
+                                        <div class="border-[1px] border-dashed w-full border-cgray"></div>
+                                    </div>
+                                    <div class="flex items-center gap-[31px] poppins-regular text-[14px] text-cgray">
+                                        <div class="text-cblack">Wed</div>
+                                        <div class="border-[1px] border-dashed w-full border-cgray"></div>
+                                    </div>
+                                    <div class="flex items-center gap-[31px] poppins-regular text-[14px] text-cgray">
+                                        <div>Thu</div>
+                                        <div class="border-[1px] border-dashed w-full border-cgray"></div>
+                                    </div>
+                                    <div class="flex items-center gap-[31px] poppins-regular text-[14px] text-cgray">
+                                        <div>Fri</div>
+                                        <div class="border-[1px] border-dashed w-full border-cgray"></div>
+                                    </div>
+                                    <div class="flex items-center gap-[31px] poppins-regular text-[14px] text-cgray">
+                                        <div>Sat</div>
+                                        <div class="border-[1px] border-dashed w-full border-cgray"></div>
+                                    </div>
+                                    <div class="flex items-center gap-[31px] poppins-regular text-[14px] text-cgray">
+                                        <div>Sun</div>
+                                        <div class="border-[1px] border-dashed w-full border-cgray"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-6 text-cblack">
+                            <div class="poppins-bold text-[24px]">Upcoming Schedule</div>
+                            <div class="flex flex-col gap-6">
+                                <a href="#"
+                                    class="flex items-center gap-6 py-5 pr-[18px] pl-6 border-l-[16px] border-green bg-white rounded-xl group hover:bg-db/25">
+                                    <div
+                                        class="rounded-lg bg-db/25 flex flex-col items-center justify-center py-[5px] px-[15px]">
+                                        5
+                                        <span>Jan</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="poppins-semibold text-lg">UX Research</div>
+                                        <div class="flex items-center gap-2 poppins-regular text-[14px] text-cgray">
+                                            <img src="./img/clock.svg" alt="">
+                                            07.00 - 08.00 AM
+                                        </div>
+                                    </div>
+                                    <button class="group-hover:scale-[1.5] ml-auto"><img src="./img/rightgreen.svg" alt=""></button>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-6 py-5 pr-[18px] pl-6 border-l-[16px] border-cyellow bg-white rounded-xl group hover:bg-db/25">
+                                    <div
+                                        class="rounded-lg bg-db/25 flex flex-col items-center justify-center py-[5px] px-[15px]">
+                                        5
+                                        <span>Jan</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="poppins-semibold text-lg">UX Research</div>
+                                        <div class="flex items-center gap-2 poppins-regular text-[14px] text-cgray">
+                                            <img src="./img/clock.svg" alt="">
+                                            07.00 - 08.00 AM
+                                        </div>
+                                    </div>
+                                    <button class="group-hover:scale-[1.5] ml-auto"><img src="./img/rightyellow.svg" alt=""></button>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
